@@ -6,7 +6,7 @@ POST https://api.4pyun.com/gate/1.0/payment/trade/prepare
 **接口说明**
 
 	1. app_id,app_secret 用户身份id和加密密钥由平台方提供，对接方需提供公司全称然后给到商务提交给研发申请
-	2. 无感支付场景必须传递extra具体参考测试用例
+	2. 无感支付场景必须传递extra具体参考测试用例,其中的parking_serial需要和进出场上报接口的parking_serial字段保持一致
 	3. deduct_mode是无感状态同步接口返回的值，该值平台不关注具体值是多少,对接方也无需关心，微信或者支付宝透传给平台，平台再透传给调用方调用方再透传给到微信或者支付宝
 	4. 该接口必须后端发起请求不能直接在前端调用该接口
 	5. 历史小程序插件(新对接已经不再支持)`callback_url`在小程序调用场景，仅支持当前小程序内页面跳转，需传入例如`/pages/index/index`！
